@@ -15,6 +15,44 @@ cream = f3ecda
     border: red solid 1px;
 }
 
+/* for mobile */
+[class*="col-"] {
+    width: 100%;
+}
+
+/* for tablet */
+@media only screen and (min-width: 600px) {
+    .col-s1 {width: 8.33%;}
+    .col-s2 {width: 16.66%;}
+    .col-s3 {width: 25%;}
+    .col-s4 {width: 33.33%;}
+    .col-s5 {width: 41.66%;}
+    .col-s6 {width: 50%;}
+    .col-s7 {width: 58.33%;}
+    .col-s8 {width: 66.66%;}
+    .col-s9 {width: 75%;}
+    .col-s10 {width: 83.33%;}
+    .col-s11 {width: 91.66%;}
+    .col-s12 {width: 100%;}
+}
+
+/* for destop */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+
 
 /*----FIRSTPAGE----*/
 .firstPage{
@@ -26,12 +64,40 @@ cream = f3ecda
 
 }
 
-    .text{
-        display: flex;
-        flex-direction: column;
-        color: #f3ecda;
-    }
+.text{
+    display: flex;
+    flex-direction: column;
+    color: #f3ecda;
+}
 
+.firstPage h2 {
+    text-align: center;
+    color: #473c33;
+}
+
+.firstPage p {
+    text-align: center ;
+}
+
+.tapbar {
+    position: absolute;
+    width: 90vw;
+    height: 10vw;
+    border-radius: 20px;
+    bottom: 0;
+    margin-bottom: 10%;
+    background-color: #f3ecda;
+}
+
+.cir {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    left: 37.5vw;
+    bottom: -2.5vw;
+    background-color: #f3ecda;
+}
 
 /*----SECONDPAGE----*/
 .secondPage{
