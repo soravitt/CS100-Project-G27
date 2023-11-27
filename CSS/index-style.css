@@ -139,3 +139,32 @@ cream = f3ecda
     height: 120vh;
     background-color: #f3ecda;
 }
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+}
+
+    .photo{
+        border-radius: 50%;
+        width: 40rem;
+        height: 40rem;
+    }
+    .photo-container{
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .photo-container h1{
+        margin-top: 3rem;
+        font-size: 7rem;
+    }
+
+    .photo-container p{
+        font-size: 4rem;
+        width: 50rem;
+        text-align: center;
+    }
