@@ -1,0 +1,39 @@
+* {
+    border: solid transparent 1px;
+}
+
+.con {
+    background-color: #f3ecda;
+    height: 100vh;
+    width: 100vw;
+}
+
+.headsty {
+    color: #473c33;
+    text-align: center;
+}
+
+.headsty header {
+    background-color: #abc270;
+}
+
+.headsty header h1 li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+.headsty header h1 li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background-color: #fda769;
+    position: absolute;
+    transition: 0.5s;
+    left: 0;
+    bottom: 0;
+}
+
+.headsty header h1 li:hover::after {
+    width: 100%;
+}
