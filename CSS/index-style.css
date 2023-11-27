@@ -12,7 +12,8 @@ cream = f3ecda
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: red solid 1px;
+    border: red solid px;
+    font-size: 1vw;
 }
 
 /* for mobile */
@@ -58,6 +59,7 @@ cream = f3ecda
 .firstPage{
     background-color: #abc270;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -73,31 +75,64 @@ cream = f3ecda
 .firstPage h2 {
     text-align: center;
     color: #473c33;
+    font-size: 5rem;
 }
 
 .firstPage p {
     text-align: center ;
+    font-size: 5rem;
 }
 
-.tapbar {
+/*----BarAndCircle----*/
+.tabbar {
     position: absolute;
     width: 90vw;
     height: 10vw;
-    border-radius: 20px;
     bottom: 0;
+    border-radius: 20px;
     margin-bottom: 10%;
     background-color: #f3ecda;
+    border: #abc270 solid 1px;
+    position: fixed;
 }
+    .fire-container{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
 
-.cir {
-    position: absolute;
-    width: 15vw;
-    height: 15vw;
-    border-radius: 50%;
-    left: 37.5vw;
-    bottom: -2.5vw;
-    background-color: #f3ecda;
-}
+        .fire-container img{
+            width: 20%;
+            height: 70%;
+        }
+
+    .cir {
+        position: absolute;
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+        left: 37.5vw;
+        bottom: -2.5vw;
+        background-color: #f3ecda;
+        border: #abc270 solid 1px;
+    }
+
+        .img-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img-container img{
+            width: 60%;
+        }
+
+
+
 
 /*----SECONDPAGE----*/
 .secondPage{
