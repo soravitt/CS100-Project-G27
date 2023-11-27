@@ -168,3 +168,16 @@ cream = f3ecda
         width: 50rem;
         text-align: center;
     }
+
+
+/* THIRDPAGE */
+.Curve-Container{
+    fill: #fec868;
+    background-color: #f3ecda;
+}
+
+.Block-Container{
+    height: 100vh;
+    background-color: #fec868;
+    margin-top: -1rem;
+}
