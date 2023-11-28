@@ -16,43 +16,32 @@ cream = f3ecda
     font-size: 1vw;
 }
 
-/* for mobile */
-[class*="col-"] {
-    width: 100%;
-}
 
-/* for tablet */
-@media only screen and (min-width: 600px) {
-    .col-s1 {width: 8.33%;}
-    .col-s2 {width: 16.66%;}
-    .col-s3 {width: 25%;}
-    .col-s4 {width: 33.33%;}
-    .col-s5 {width: 41.66%;}
-    .col-s6 {width: 50%;}
-    .col-s7 {width: 58.33%;}
-    .col-s8 {width: 66.66%;}
-    .col-s9 {width: 75%;}
-    .col-s10 {width: 83.33%;}
-    .col-s11 {width: 91.66%;}
-    .col-s12 {width: 100%;}
+header{
+    height: 20vh;
+    background-color: #abc270;
+    display: flex;
+    align-items: center;
 }
+    .Menu{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:0 8rem;
+        visibility: hidden;
+    }
 
-/* for destop */
-@media only screen and (min-width: 768px) {
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-}
+    .Menu a{
+        font-size: 5rem;
+        color: #f3ecda;
+        text-decoration: none;
+    }
 
+    .SubMenu a{
+        margin-left: 6rem;
+        font-size: 3rem;
+    }
 
 
 /*----FIRSTPAGE----*/
@@ -62,7 +51,7 @@ cream = f3ecda
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
 
 }
 
@@ -70,6 +59,7 @@ cream = f3ecda
     display: flex;
     flex-direction: column;
     color: #f3ecda;
+    margin-bottom: 20vh;
 }
 
 .firstPage h2 {
@@ -143,6 +133,7 @@ cream = f3ecda
 .info-container{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
     .photo{
@@ -180,4 +171,181 @@ cream = f3ecda
     height: 100vh;
     background-color: #fec868;
     margin-top: -1rem;
+}
+
+
+
+
+
+
+/* RESPONSIVE */
+
+/* 612 */
+@media only screen and (min-width: 612px) {
+    .tabbar{
+        width: 80vw;
+        height: 7vw;
+    }
+
+    .cir{
+        width: 12vw;
+        height: 12vw;
+        left: 34vw;
+    }
+
+    .fire-container img{
+        width: 15%;
+    }
+
+
+    .photo{
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .photo-container h1{
+        font-size: 5rem;
+    }
+
+    .photo-container p{
+        font-size: 3rem;
+    }
+
+
+
+    /* 768 --Tablet */
+    @media only screen and (min-width: 774px) {
+        .Menu{
+            visibility: visible;
+        }
+
+        .tabbar{
+            visibility: hidden;
+        }
+
+
+        .photo{
+            width: 25rem;
+            height: 25rem;
+        }
+    
+        .photo-container h1{
+            font-size: 4rem;
+        }
+    
+        .photo-container p{
+            font-size: 2.5rem;
+        }
+
+
+    }
+
+
+    /* 956 */
+    @media only screen and (min-width: 956px) {
+        .Menu a{
+            font-size: 4rem;
+        }
+            .SubMenu a{
+                font-size: 3rem;
+            }
+
+        .tabbar{
+            visibility: hidden;
+        }
+
+
+        .photo{
+            width: 20rem;
+            height: 20rem;
+        }
+    
+        .photo-container h1{
+            font-size: 4rem;
+        }
+    
+        .photo-container p{
+            font-size: 2.5rem;
+        }
+
+
+        /* 1064 */
+    @media only screen and (min-width: 1064px) {
+        .Menu a{
+            font-size: 3rem;
+        }
+            .SubMenu a{
+                font-size: 2rem;
+            }
+
+        .tabbar{
+            visibility: hidden;
+        }
+
+
+        .photo{
+            width: 20rem;
+            height: 20rem;
+        }
+    
+        .photo-container h1{
+            font-size: 3rem;
+        }
+    
+        .photo-container p{
+            font-size: 2rem;
+        }
+
+
+    }
+
+
+    /* 1228 */
+    @media only screen and (min-width: 1228px) {
+    .Menu a{
+        font-size: 2rem;
+    }
+    .text h2{
+        font-size: 3rem;
+    }
+    .text p{
+        font-size: 1.7rem;
+    }
+
+        .secondPage{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-container{
+            flex-direction: row;
+        }
+            .photo-container p{
+                font-size: 2rem;
+                width: 30rem;
+                text-align: center;
+            }
+
+        .photo{
+            width: 17rem;
+            height: 17rem;
+        }
+
+        .info-container{
+            display: flex;
+            justify-content: space-around;
+            padding: 0 7rem;
+        }
+    
+        .photo-container h1{
+            font-size: 3rem;
+        }
+    
+        .photo-container p{
+            font-size: 2rem;
+            width: 14rem;
+        } 
+    }
+    }
 }
