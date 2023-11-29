@@ -14,6 +14,7 @@ cream = f3ecda
     box-sizing: border-box;
     border: red solid px;
     font-size: 1vw;
+    z-index: 1;
 }
 
 
@@ -126,7 +127,7 @@ header{
 
 /*----SECONDPAGE----*/
 .secondPage{
-    height: 120vh;
+    height: 240rem;
     background-color: #f3ecda;
 }
 
@@ -137,7 +138,7 @@ header{
 }
     
     .photo-container{
-        height: 40vh;
+        height: 80rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -168,6 +169,8 @@ header{
 .Curve-Container{
     fill: #fec868;
     background-color: #f3ecda;
+    margin-top: -20rem;
+    z-index: -10;
 }
 
 .Block-Container{
@@ -183,164 +186,72 @@ header{
 
 /* RESPONSIVE */
 
-/* 612 */
-@media only screen and (min-width: 612px) {
+/* 768 --Tablet----HiddenBar */
+@media only screen and (min-width: 768px) {
+    .Menu{
+        visibility: visible;
+    }
+
     .tabbar{
-        width: 80vw;
-        height: 7vw;
+        visibility: hidden;
     }
-
-    .cir{
-        width: 12vw;
-        height: 12vw;
-        left: 34vw;
-    }
-
-    .fire-container img{
-        width: 15%;
-    }
-
-
+    
     .photo{
         width: 30rem;
         height: 30rem;
     }
+}
+
+
+
+/* 1000 ----Computer----PhotoColumn*/
+@media only screen and (min-width: 1000px) {
+.Menu a{
+    font-size: 2rem;
+}
+.text h2{
+    font-size: 3rem;
+}
+.text p{
+    font-size: 1.7rem;
+}
+
+.secondPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70rem;
+}
+
+.info-container{
+    flex-direction: row;
+    margin-bottom: 20rem;
+}
+    .photo-container p{
+        font-size: 2rem;
+        width: 30rem;
+        text-align: center;
+    }
+
+    .photo{
+        width: 14rem;
+        height: 14rem;
+    }
+
+    .info-container{
+        display: flex;
+        justify-content: space-around;
+        padding: 0 7rem;
+    }
 
     .photo-container h1{
-        font-size: 5rem;
+        font-size: 2.2rem;
     }
 
     .photo-container p{
-        font-size: 3rem;
-    }
-
-
-
-    /* 768 --Tablet----HiddenBar */
-    @media only screen and (min-width: 774px) {
-        .Menu{
-            visibility: visible;
-        }
-
-        .tabbar{
-            visibility: hidden;
-        }
-
-
-        .photo{
-            width: 25rem;
-            height: 25rem;
-        }
-    
-        .photo-container h1{
-            font-size: 4rem;
-        }
-    
-        .photo-container p{
-            font-size: 2.5rem;
-        }
-
-
-    }
-
-
-    /* 956 */
-    @media only screen and (min-width: 956px) {
-        .Menu a{
-            font-size: 4rem;
-        }
-            .SubMenu a{
-                font-size: 3rem;
-            }
-
-        .photo{
-            width: 20rem;
-            height: 20rem;
-        }
-    
-        .photo-container h1{
-            font-size: 4rem;
-        }
-    
-        .photo-container p{
-            font-size: 2.5rem;
-        }
-
-
-        /* 1064 */
-    @media only screen and (min-width: 1064px) {
-        .text h2{
-            font-size: 4rem;
-        }
-            .text p{
-                font-size: 2.5rem;
-            }
-
-        .Menu a{
-            font-size: 3rem;
-        }
-            .SubMenu a{
-                font-size: 2rem;
-            }
-    
-        .photo-container h1{
-            font-size: 3rem;
-        }
-    
-        .photo-container p{
-            font-size: 2rem;
-        }
-
-
-    }
-
-
-    /* 1228 ----Computer*/
-    @media only screen and (min-width: 1228px) {
-    .Menu a{
-        font-size: 2rem;
-    }
-    .text h2{
-        font-size: 3rem;
-    }
-    .text p{
         font-size: 1.7rem;
-    }
+        width: 14rem;
+    } 
 
-        .secondPage{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
 
-        .info-container{
-            flex-direction: row;
-        }
-            .photo-container p{
-                font-size: 2rem;
-                width: 30rem;
-                text-align: center;
-            }
-
-        .photo{
-            width: 14rem;
-            height: 14rem;
-        }
-
-        .info-container{
-            display: flex;
-            justify-content: space-around;
-            padding: 0 7rem;
-        }
-    
-        .photo-container h1{
-            font-size: 2.2rem;
-        }
-    
-        .photo-container p{
-            font-size: 1.7rem;
-            width: 14rem;
-        } 
-    }
-    }
 }
