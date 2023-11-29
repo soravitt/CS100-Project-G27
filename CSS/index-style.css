@@ -231,7 +231,14 @@ footer{
     height: 50vw;
     background-color: #fec868;
     margin-top: -1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    padding: 1rem;
 }
+    .footer p{
+        visibility: hidden;
+    }
 
 
 
@@ -334,5 +341,8 @@ footer{
 footer{
     height: 10rem;
 }
+    footer .p{
+        visibility: visible;
+    }
 
 }
