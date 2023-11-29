@@ -135,12 +135,7 @@ header{
     flex-direction: column;
     width: 100%;
 }
-
-    .photo{
-        border-radius: 50%;
-        width: 40rem;
-        height: 40rem;
-    }
+    
     .photo-container{
         height: 40vh;
         display: flex;
@@ -148,16 +143,24 @@ header{
         justify-content: center;
         align-items: center;
     }
+    .photo{
+        border-radius: 50%;
+        width: 40rem;
+        height: 40rem;
+        object-fit: cover
+    }
 
     .photo-container h1{
         margin-top: 3rem;
         font-size: 7rem;
+        color: #473c33;
     }
 
     .photo-container p{
         font-size: 4rem;
         width: 50rem;
         text-align: center;
+        color: #473c33;
     }
 
 
@@ -213,7 +216,7 @@ header{
 
 
 
-    /* 768 --Tablet */
+    /* 768 --Tablet----HiddenBar */
     @media only screen and (min-width: 774px) {
         .Menu{
             visibility: visible;
@@ -250,11 +253,6 @@ header{
                 font-size: 3rem;
             }
 
-        .tabbar{
-            visibility: hidden;
-        }
-
-
         .photo{
             width: 20rem;
             height: 20rem;
@@ -271,22 +269,19 @@ header{
 
         /* 1064 */
     @media only screen and (min-width: 1064px) {
+        .text h2{
+            font-size: 4rem;
+        }
+            .text p{
+                font-size: 2.5rem;
+            }
+
         .Menu a{
             font-size: 3rem;
         }
             .SubMenu a{
                 font-size: 2rem;
             }
-
-        .tabbar{
-            visibility: hidden;
-        }
-
-
-        .photo{
-            width: 20rem;
-            height: 20rem;
-        }
     
         .photo-container h1{
             font-size: 3rem;
@@ -300,7 +295,7 @@ header{
     }
 
 
-    /* 1228 */
+    /* 1228 ----Computer*/
     @media only screen and (min-width: 1228px) {
     .Menu a{
         font-size: 2rem;
@@ -328,8 +323,8 @@ header{
             }
 
         .photo{
-            width: 17rem;
-            height: 17rem;
+            width: 14rem;
+            height: 14rem;
         }
 
         .info-container{
@@ -339,11 +334,11 @@ header{
         }
     
         .photo-container h1{
-            font-size: 3rem;
+            font-size: 2.2rem;
         }
     
         .photo-container p{
-            font-size: 2rem;
+            font-size: 1.7rem;
             width: 14rem;
         } 
     }
