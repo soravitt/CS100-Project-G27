@@ -68,11 +68,49 @@ header{
     color: #473c33;
     font-size: 5rem;
 }
+    .firstPage h2 span{
+        text-align: center;
+        color: #473c33;
+        font-size: 5rem;
+    }
 
 .firstPage p {
     text-align: center ;
     font-size: 5rem;
 }
+    .firstPage p span{
+        text-align: center ;
+        font-size: 5rem;
+    }
+
+/* Box */
+.Box-Container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    visibility: hidden;
+    position: absolute;
+    bottom: 12rem;
+}
+    .Box{
+        width: 3rem;
+        height: 3rem;
+        background-color: #473c33;
+        margin: 0 1rem;
+    }
+
+.Detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 0.5rem;
+    visibility: hidden;
+}
+    .Detail p{
+        font-size: 0.8rem;
+        color: #f3ecda;
+    }
 
 /*----BarAndCircle----*/
 .tabbar {
@@ -164,6 +202,12 @@ header{
         text-align: center;
         color: #473c33;
     }
+        .Ball h1{
+            color: #fec868;
+        }
+        .Peet h1{
+            color: #abc270;
+        }
 
 
 /* THIRDPAGE */
@@ -212,13 +256,31 @@ header{
 /* 1000 ----Computer----PhotoColumn*/
 @media only screen and (min-width: 1000px) {
 .Menu a{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .text h2{
-    font-size: 3rem;
+    font-size: 4rem;
+    text-align: left;
 }
+    .text h2 span{
+        color: #f3ecda;
+        font-size: 4.5rem;
+    }
 .text p{
     font-size: 1.7rem;
+    text-align: end;
+}
+    .text p span{
+        font-size: 1.7rem;
+        color: #473c33;
+    }
+
+.Box{
+    visibility: visible;
+}   
+
+.Detail{
+    visibility: visible;
 }
 
 .secondPage{
@@ -231,32 +293,28 @@ header{
 .info-container{
     flex-direction: row;
     margin-bottom: 20rem;
+    justify-content: space-around;
+    padding: 0 5rem;
 }
-    .photo-container p{
-        font-size: 2rem;
-        width: 30rem;
-        text-align: center;
+
+    .photo-container{
+        height: 100%;
     }
 
-    .photo{
-        width: 14rem;
-        height: 14rem;
-    }
+        .photo-container h1{
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
 
-    .info-container{
-        display: flex;
-        justify-content: space-around;
-        padding: 0 7rem;
-    }
+        .photo{
+            width: 14rem;
+            height: 14rem;
+        }
 
-    .photo-container h1{
-        font-size: 2.2rem;
-    }
-
-    .photo-container p{
-        font-size: 1.7rem;
-        width: 14rem;
-    } 
+        .photo-container p{
+            font-size: 1rem;
+            width: 14rem;
+        } 
 
 
 }
