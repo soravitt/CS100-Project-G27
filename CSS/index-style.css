@@ -37,6 +37,9 @@ header{
         padding:0 8rem;
         visibility: hidden;
     }
+        .Menu a:hover{
+            opacity: 70%;
+        }
 
     .Menu a{
         font-size: 5rem;
@@ -48,6 +51,9 @@ header{
         margin-left: 6rem;
         font-size: 3rem;
     }
+        .SubMenu a:hover {
+            opacity: 70%;
+        }
 
 
 /*----FIRSTPAGE----*/
@@ -200,7 +206,7 @@ header{
     }
 
     .photo-container p{
-        font-size: 4rem;
+        font-size: 3rem;
         width: 50rem;
         text-align: center;
         color: #473c33;
