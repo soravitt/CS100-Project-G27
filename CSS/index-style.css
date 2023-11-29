@@ -7,6 +7,11 @@ brown = 473c33
 cream = f3ecda
 */
 
+html{
+    font-family: 'Anuphan', sans-serif;
+    font-weight: 500;
+}
+
 
 *{
     margin: 0;
