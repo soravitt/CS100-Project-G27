@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    border: #f3ecda solid 1px;
+    border: transparent solid 0px;
     font-size: 1vw;
 }
 
@@ -10,11 +10,14 @@ html{
     font-weight: 500;
 }
 
+
 .con {
     background-color: #f3ecda;
-    height: 100vh;
+    height: 130vh;
     width: 100vw;
 }
+
+
 
 .headsty {
     color: #473c33;
@@ -32,11 +35,11 @@ html{
     position: relative;
     margin-left: 3vw;
     margin-top: 3vh;
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 #head {
-    font-size: 3rem;
+    font-size: 5rem;
     color: #473c33;
     font-weight: lighter;
 }
@@ -56,8 +59,14 @@ html{
     width: 100%;
 }
 
+.form-group label {
+    font-size: 3rem;
+}
+
 .form-group input {
     background-color: #f3ecda;
+    font-size: 2rem;
+    opacity: 70%;
 }
 
 .form-group select {
@@ -80,7 +89,7 @@ html{
 .form-group select,
 .form-group textarea,
 .form-group input[type="datetime-local"] {
-  width: 30vw;
+  width: 90vw;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 15px; /* change border to 15px (original is 4px) */
@@ -90,18 +99,21 @@ html{
 /* Allow vertical resizing for textareas */
 .form-group textarea {
     resize: vertical;
-    width: 30vw; /* change the default width */
+    width: 90vw; /* change the default width */
 }
 
 /* Styling for select dropdowns */
 .form-group select {
-    width: 100%;
+    width: 90vw;
+    font-size: 2rem;
+    opacity: 70%;
   }
   
   /* Styling for the submit button */
   .form-group input[type="submit"] {
     background-color: #473c33;
     color: white;
+    font-size: 2rem;
     padding: 10px 15px;
     border: none;
     border-radius: 15px; /* change border to 15px (original is 4px) */
@@ -110,13 +122,17 @@ html{
   
   /* Styling for small helper text */
   .form-group small {
-    font-size: 12px;
+    font-size: 2rem;
     color: #888;
   }
 
    /* Position the error message relatively within the form group */
    .form-group {
     position: relative;
+  }
+
+  .form-group option {
+    font-size: 2rem;
   }
   
   /* Styling for error messages */
@@ -128,7 +144,7 @@ html{
 
 .col-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .col1 {
@@ -145,6 +161,151 @@ html{
     margin-top: 3vh;
 } 
 
+.col3 {
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
 .under {
     margin-left: 3vw;
+}
+
+.tabbar {
+    position: absolute;
+    width: 90vw;
+    height: 10vw;
+    bottom: 0;
+    border-radius: 20px;
+    margin-bottom: 10%;
+    background-color: #f3ecda;
+    border: #473c33 solid 1px;
+    position: fixed;
+    z-index: 3;
+}
+    .fire-container{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+        .fire-container img{
+            width: 20%;
+            height: 70%;
+        }
+
+    .cir {
+        position: absolute;
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+        left: 37.5vw;
+        bottom: -2.5vw;
+        background-color: #f3ecda;
+        border: #473c33 solid 1px;
+    }
+
+        .img-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img-container img{
+            width: 60%;
+        }
+
+
+/* 768 --Tablet----HiddenBar */
+@media only screen and (min-width: 768px) {
+   .tabbar {
+    visibility: hidden;
+   }
+
+   .form-group label {
+    font-size: 2rem;
+   }
+
+   .form-group small {
+    font-size: 1.5rem;
+   }
+}
+
+/* for labtop */
+@media only screen and (min-width: 1000px) {
+
+    .col-container {
+        display: flex;
+        flex-direction: row;
+      }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select,
+    .form-group textarea,
+    .form-group input[type="datetime-local"] {
+        width: 30vw;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        width: 30vw; /* change the default width */
+    }
+    
+    /* Styling for select dropdowns */
+    .form-group select {
+        width: 30vw;
+        font-size: 2rem;
+        opacity: 70%;
+    }
+
+    .form-group label {
+        font-size: 1.3rem;
+    }
+    
+    .form-group small {
+        font-size: 0.75rem;
+    }
+
+    .form-group select {
+        font-size: 1rem;
+    }
+
+    .form-group input {
+        font-size: 0.9rem;
+    }
+
+    .headsty header h1 li {
+        font-size: 3rem;
+    }
+    
+    #head {
+        font-size: 3rem;
+    }
+
+    .form-group option {
+        font-size: 0.9rem;
+    }
+
+    .form-group input[type="submit"] {
+        font-size: 1rem;
+    }
+    
+    .con {
+        height: 100vh;
+    }
+
+    .col3 {
+        position: absolute;
+        visibility: visible;
+        right: 0;
+        margin-bottom: 0;
+        width: 62.5vh;
+    }
+
 }

@@ -61,7 +61,7 @@
           <div class="col2">
             <!-- Type of Work/Activity Field -->
             <div class="form-group">
-                  <label for="activityType">Type of Work/Activity</label>
+                  <label for="activityType">Type of Work/Activity</label><br>
                   <select id="activityType" name="activityType">
                   <option value="" disabled selected>Select an option</option>
                   </select>
@@ -82,7 +82,7 @@
           
             <!-- Academic Year Field -->
             <div class="form-group">
-              <label for="academicYear">Academic Year</label>
+              <label for="academicYear">Academic Year</label><br>
               <select id="academicYear" name="academicYear">
                 <option value="" disabled selected>Select an option</option>
                 <option value="2561">2561</option>
@@ -99,7 +99,7 @@
           
             <!-- Semester Field -->
             <div class="form-group">
-              <label for="semester">Semester</label>
+              <label for="semester">Semester</label><br>
               <select id="semester" name="semester">
                 <option value="" disabled selected>Select an option</option>
                 <option value="1">1</option>
@@ -120,26 +120,57 @@
               <input type="datetime-local" id="endDate" name="endDate" />
             </div>
           </div>
+
+          <div class="col3">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMinYMax meet" viewBox="0 0 479.84 766">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #463c33;
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path class="cls-1" d="M1473,622c-73.3-28.27-176.38-16.559-203,35-41.48,80.342,135.79,205.029,118,362-12.83,113.13-99.07,192.96-146,226-59.73,42.05-170.41,49.37-200,111-32.14,66.94,18.78,171.44,89,220,128.4,88.79,343.86,5.02,453-115C1805.79,1217.11,1693.07,706.873,1473,622Z" transform="translate(-1032.16 -607)"/>
+          </svg>
         </div>
+
+        </div>
+
+        
 
         <div class="under">
           <!-- Description Field -->
           <div class="form-group">
             <label for="description">Description</label><br>
             <textarea id="description" name="description" rows="4"></textarea>
-          </div>
+          </div><br>
   
           <!-- Submit Button -->
           <div class="form-group">
             <input type="submit" value="Submit" />
           </div>
+
+          <div class="tabbar">
+            <a href="../html/OurActivity.html" class="fire-container">
+                <img src="../image/icon-fire.gif" alt="">
+            </a>
+      
+            <div class="cir">
+                <a href="../index.html" class="img-container">
+                    <img src="../image/icon-home.gif" alt="">
+                </a>
+            </div>
+        </div>
         </div>
 
     <div id="formDataOutput"></div>
   
     <!-- JavaScript -->
     <script src="../JS/script.js"></script>
+
   </div>
+  
     
 </body>
 </html>
