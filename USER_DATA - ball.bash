@@ -20,10 +20,10 @@ sudo npm install pm2 -g
 cd /home/ec2-user
 
 # Clone the repository
-git clone -b example https://github.com/soravitt/CS100-Project-G27.git
+git clone -b master https://github.com/soravitt/CS100-Project-G27
 
 # Navigate to the project directory and install dependencies
-cd CS100-Project-G27/Backend
+cd cs100/CSTU\ Passport/Backend
 sudo npm install
 
 # Start the application using pm2
@@ -35,18 +35,17 @@ sudo pm2 save
 # Ensure pm2 starts on boot
 sudo pm2 startup
 
-# Install Nginx
+
 sudo yum install -y nginx
 
-# Start Nginx and enable it to start on boot
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
-sudo cp -r /home/ec2-user/cs100/'CSTU Passport'/CSS/index-style.css /usr/share/nginx/html/
-sudo cp -r /home/ec2-user/cs100/'CSTU Passport'/JS/script.js /usr/share/nginx/html/
-sudo cp /home/ec2-user/cs100/'CSTU Passport'/index.html /usr/share/nginx/html/
-sudo cp /home/ec2-user/cs100/'CSTU Passport'/script.js /usr/share/nginx/html/
-sudo cp /home/ec2-user/cs100/'CSTU Passport'/styles.css /usr/share/nginx/html/
+sudo cp -r /home/ec2-user/'CSTCS100-Project-G27'/html /usr/share/nginx/html/
+sudo cp -r /home/ec2-user/'CS100-Project-G27'/JS /usr/share/nginx/html/
+sudo cp /home/ec2-user/'CS100-Project-G27'/index.html /usr/share/nginx/html/
+sudo cp /home/ec2-user/'CS100-Project-G27'/script.js /usr/share/nginx/html/
+sudo cp /home/ec2-user/'CS100-Project-G27'/CSS/index-stle.css /usr/share/nginx/html/
 
 # Restart Nginx to reflect the changes
 sudo systemctl restart nginx
