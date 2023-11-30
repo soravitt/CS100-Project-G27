@@ -42,14 +42,14 @@ header{
         }
 
     .Menu a{
-        font-size: 5rem;
+        font-size: 6rem;
         color: #f3ecda;
         text-decoration: none;
     }
 
     .SubMenu a{
         margin-left: 6rem;
-        font-size: 3rem;
+        font-size: 6rem;
     }
         .SubMenu a:hover {
             opacity: 70%;
