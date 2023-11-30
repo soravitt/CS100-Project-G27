@@ -35,15 +35,19 @@ sudo pm2 save
 # Ensure pm2 starts on boot
 sudo pm2 startup
 
-
+# Install Nginx
 sudo yum install -y nginx
 
+# Start Nginx and enable it to start on boot
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
+# Copy HTML, JS, and CSS files to Nginx's web directory
 sudo cp -r /home/ec2-user/CS100-Project-G27/html /usr/share/nginx/html/
 sudo cp -r /home/ec2-user/CS100-Project-G27/JS /usr/share/nginx/html/
+sudo cp /home/ec2-user/CS100-Project-G27/CSS /usr/share/nginx/html/
 sudo cp /home/ec2-user/CS100-Project-G27/index.html /usr/share/nginx/html/
+sudo cp /home/ec2-user/CS100-Project-G27/ourActivity.html /usr/share/nginx/html/
 
 # Restart Nginx to reflect the changes
 sudo systemctl restart nginx
