@@ -1,5 +1,13 @@
 * {
-    border: solid transparent 1px;
+    margin: 0;
+    padding: 0;
+    border: #f3ecda solid 1px;
+    font-size: 1vw;
+}
+
+html{
+    font-family: 'Anuphan', sans-serif;
+    font-weight: 500;
 }
 
 .con {
@@ -10,17 +18,25 @@
 
 .headsty {
     color: #473c33;
-    text-align: center;
+    text-align: left;
 }
 
 .headsty header {
-    background-color: #abc270;
+    background-color: #f3ecda;
 }
 
 .headsty header h1 li {
     list-style: none;
     display: inline-block;
     position: relative;
+    left: 5vw;
+    font-size: 3rem;
+}
+
+.headsty header h1 li span{
+    font-size: 3rem;
+    color: #473c33;
+    font-weight: lighter;
 }
 
 .headsty header h1 li::after {
@@ -36,4 +52,16 @@
 
 .headsty header h1 li:hover::after {
     width: 100%;
+}
+
+.form-group input {
+    background-color: #f3ecda;
+}
+
+.form-group select {
+    background-color: #f3ecda;
+}
+
+.form-group textarea {
+    background-color: #f3ecda;
 }
