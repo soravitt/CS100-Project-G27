@@ -41,18 +41,17 @@ header{
             opacity: 70%;
         }
 
-    .Menu p{
-        font-size: 2rem;
+    .Menu a{
+        font-size: 6rem;
         color: #f3ecda;
         text-decoration: none;
     }
 
-    .SubMenu p{
-        display: inline;
+    .SubMenu a{
         margin-left: 6rem;
-        font-size: 2rem;
+        font-size: 6rem;
     }
-        .SubMenu p:hover {
+        .SubMenu a:hover {
             opacity: 70%;
         }
 

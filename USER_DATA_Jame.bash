@@ -41,7 +41,7 @@ sudo yum install -y nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
-sudo cp -r /home/ec2-user/CS100-Project-G27/html /usr/share/nginx/html/
+sudo cp /home/ec2-user/CS100-Project-G27/html/OurActivity.html /usr/share/nginx/html/
 sudo cp -r /home/ec2-user/'CS100-Project-G27'/JS /usr/share/nginx/html/
 sudo cp /home/ec2-user/'CS100-Project-G27'/index.html /usr/share/nginx/html/
 sudo cp /home/ec2-user/'CS100-Project-G27'/script.js /usr/share/nginx/html/
