@@ -49,7 +49,7 @@
   
   /* Styling for the submit button */
   .form-group input[type="submit"] {
-    background-color: #4caf50;
+    background-color: #473c33;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -68,6 +68,7 @@
   /* Position the error message relatively within the form group */
   .form-group {
     position: relative;
+    left: 5vw;
   }
   
   /* Styling for error messages */
