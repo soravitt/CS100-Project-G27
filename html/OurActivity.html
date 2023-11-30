@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/activity.css">
-    <link rel="stylesheet" href="../CSS/form-style.css">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100;500;700;1000&family=Sarabun:wght@800&display=swap');
     </style>
@@ -14,7 +13,7 @@
 <body>
     <div class="headsty">
         <header>
-            <h1><li>CSTU <span>PASSPORT</span></li></h1>
+            <h1><li>CSTU <span id="head">PASSPORT</span></li></h1>
         </header>
     </div>
     <div class="con">
@@ -23,39 +22,40 @@
           <div class="col1">
             <!-- Firstname and Lastname Field -->
             <div class="form-group">
-              <label for="fullname">Firstname and Lastname</label>
-              <input type="text" id="fullname" name="fullname" />
+              <label for="fullname">Firstname and Lastname</label><br>
+              <input type="text" id="fullname" name="fullname" required /><br>
               <small>Only enter your first name and last name, middle name is not necessary.</small>
               <span id="fullnameError" class="error"></span>
             </div>
             
             <!-- Student ID Field -->
             <div class="form-group">
-              <label for="studentID">Student ID</label>
-              <input type="text" id="studentID" name="studentID" />
+              <label for="studentID">Student ID</label><br>
+              <input type="text" id="studentID" name="studentID" required /><br>
               <small>Please enter your 10-digit student ID.</small>
               <span id="studentIDError" class="error"></span>
             </div>
             
             <!-- University Email Field -->
             <div class="form-group">
-              <label for="email">University Email</label>
-              <input type="email" id="email" name="email" />
+              <label for="email">University Email</label><br>
+              <input type="email" id="email" name="email" required /><br>
               <small>Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".</small>
               <span id="emailError" class="error"></span>
             </div>
           
             <!-- Work/Activity Title Field -->
             <div class="form-group">
-              <label for="workTitle">Work/Activity Title</label>
-              <input type="text" id="workTitle" name="workTitle" />
-            </div>
+              <label for="workTitle">Work/Activity Title</label><br>
+              <input type="text" id="workTitle" name="workTitle" required />
+            </div><br>
           
             <!-- Location Field -->
             <div class="form-group">
-              <label for="location">Location</label>
-              <input type="text" id="location" name="location" />
+              <label for="location">Location</label><br>
+              <input type="text" id="location" name="location" required />
             </div>
+
           </div>
     
           <div class="col2">
@@ -65,7 +65,7 @@
                   <select id="activityType" name="activityType">
                   <option value="" disabled selected>Select an option</option>
                   </select>
-            </div>
+            </div><br>
             <!-- <div class="form-group">
               <label for="activityType">Type of Work/Activity</label>
               <select id="activityType" name="activityType">
@@ -95,7 +95,7 @@
                 <option value="2568">2568</option>
                 <option value="2569">2569</option>
               </select>
-            </div>
+            </div><br>
           
             <!-- Semester Field -->
             <div class="form-group">
@@ -106,26 +106,26 @@
                 <option value="2">2</option>
                 <option value="Summer">Summer</option>
               </select>
-            </div>
+            </div><br>
           
             <!-- Start Date/Time Field -->
             <div class="form-group">
-              <label for="startDate">Start Date/Time</label>
+              <label for="startDate">Start Date/Time</label><br>
               <input type="datetime-local" id="startDate" name="startDate" />
-            </div>
+            </div><br>
           
             <!-- End Date/Time Field -->
             <div class="form-group">
-              <label for="endDate">End Date/Time</label>
+              <label for="endDate">End Date/Time</label><br>
               <input type="datetime-local" id="endDate" name="endDate" />
             </div>
           </div>
         </div>
-  
-        <div id="under">
+
+        <div class="under">
           <!-- Description Field -->
           <div class="form-group">
-            <label for="description">Description</label>
+            <label for="description">Description</label><br>
             <textarea id="description" name="description" rows="4"></textarea>
           </div>
   
@@ -134,7 +134,6 @@
             <input type="submit" value="Submit" />
           </div>
         </div>
-    </form>
 
     <div id="formDataOutput"></div>
   
