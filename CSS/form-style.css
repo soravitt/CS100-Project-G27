@@ -39,7 +39,7 @@
   /* Allow vertical resizing for textareas */
   .form-group textarea {
     resize: vertical;
-    width: 1100px;
+    width: 1100px; /* change the default width */
   }
   
   /* Styling for select dropdowns */

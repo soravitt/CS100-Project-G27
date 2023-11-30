@@ -98,7 +98,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 // Function to submit the form
-// Function to submit the form
 async function submitForm(event) {
   event.preventDefault();
 
