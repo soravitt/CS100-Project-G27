@@ -20,7 +20,7 @@ sudo npm install pm2 -g
 cd /home/ec2-user
 
 # Clone the repository
-git clone -b example https://github.com/soravitt/CS100-Project-G27.git
+git clone -b example https://github.com/ComSciThammasatU/cs100.git
 
 # Navigate to the project directory and install dependencies
 cd CS100-Project-G27/Backend
