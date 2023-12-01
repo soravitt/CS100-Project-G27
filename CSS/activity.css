@@ -62,6 +62,7 @@ html{
 
 .form-group label {
     font-size: 3rem;
+    color: #473c33;
 }
 
 .form-group input {
@@ -221,6 +222,18 @@ html{
             width: 60%;
         }
 
+#icon {
+    position: absolute;
+    visibility: visible;
+}
+
+
+.fortab {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
 
 /* 768 --Tablet----HiddenBar */
 @media only screen and (min-width: 768px) {
@@ -235,10 +248,23 @@ html{
    .form-group small {
     font-size: 1.5rem;
    }
+
+   .fortab {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    right: 0;
+    top: -5vw;
+    margin-right: -90vw;
+}
 }
 
 /* for labtop */
 @media only screen and (min-width: 1000px) {
+
+    #icon {
+        visibility: hidden;
+    }
 
     .col-container {
         display: flex;
@@ -309,4 +335,34 @@ html{
         width: 62.5vh;
     }
 
+    .tabbar{
+        visibility: visible;
+        width: 8vh;
+        height: 90vh;
+        right: 0;
+        margin-right: 5vh;
+        margin-bottom: 5vh;
+    }
+
+    .cir{
+        width: 12vh;
+        height: 12vh;
+        border-radius: 50%;
+        left: -2vh;
+        bottom: 39vh;
+    }
+
+    .fire-container img{
+        width: 80%;
+        height: 12%;
+    }
+
+    .fire-container{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+    }
 }
