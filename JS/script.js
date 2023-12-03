@@ -137,6 +137,11 @@ async function submitForm(event) {
     return;
   }
 
+  // Process the description input with new lines
+  const descriptionInput = document.getElementById("description").value;
+  const description = descriptionInput.replace(/\n/g, "<br>"); // Replace new lines with HTML line breaks
+
+
   // Create the data object to send to the backend
   const formData = new FormData(event.target);
   const data = {
@@ -151,7 +156,7 @@ async function submitForm(event) {
     start_date: formData.get("startDate"),
     end_date: formData.get("endDate"),
     location: formData.get("location"),
-    description: formData.get("description")
+    description,
   };
 
   console.log(data);
