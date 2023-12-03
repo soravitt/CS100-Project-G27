@@ -23,7 +23,7 @@ function validateStudentID() {
   const studentIDInput = document.getElementById("studentID");
   const studentIDPattern = /^\d{10}$/;
   const errorElement = document.getElementById("studentIDError");
-  const firstTwoDigits = parseInt(studentIDInput.value.substring(0, 2), 10);
+  const firstTwoDigits = parseInt(studentIDInput.value.substring(0, 2), 10); // slice 2 first digit of Stu. ID.
 
   if (!studentIDPattern.test(studentIDInput.value)) {
     errorElement.textContent = "Please enter a 10-digit Student ID.";
