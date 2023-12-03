@@ -20,7 +20,7 @@ sudo npm install pm2 -g
 cd /home/ec2-user
 
 # Clone the repository
-git clone -b master https://github.com/soravitt/CS100-Project-G27
+git clone -b master https://github.com/soravitt/CS100-Project-G27.git
 
 # Navigate to the project directory and install dependencies
 cd CS100-Project-G27/Backend
@@ -41,12 +41,11 @@ sudo yum install -y nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
-sudo cp /home/ec2-user/CS100-Project-G27/html/OurActivity.html /usr/share/nginx/html/
-sudo cp -r /home/ec2-user/'CS100-Project-G27'/JS /usr/share/nginx/html/
-sudo cp /home/ec2-user/'CS100-Project-G27'/index.html /usr/share/nginx/html/
-sudo cp /home/ec2-user/'CS100-Project-G27'/script.js /usr/share/nginx/html/
-sudo cp -r /home/ec2-user/'CS100-Project-G27'/CSS /usr/share/nginx/html/
-sudo cp -r /home/ec2-user/'CS100-Project-G27'/image /usr/share/nginx/html/
+sudo cp -r /home/ec2-user/CS100-Project-G27/CSS /usr/share/nginx/html/
+sudo cp -r /home/ec2-user/CS100-Project-G27/image /usr/share/nginx/html/
+sudo cp -r /home/ec2-user/CS100-Project-G27/html /usr/share/nginx/html/
+sudo cp -r /home/ec2-user/CS100-Project-G27/JS /usr/share/nginx/html/
+sudo cp /home/ec2-user/CS100-Project-G27/index.html /usr/share/nginx/html/
 
 # Restart Nginx to reflect the changes
 sudo systemctl restart nginx
