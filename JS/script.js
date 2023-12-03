@@ -3,6 +3,27 @@ const config = {
 };
 const port = 8000;
 
+// change key name for output (add 1.1).
+const keyDisplayNames = {
+  first_name: "First Name",
+  last_name: "Last Name",
+  student_id: "Student ID",
+  email: "Email",
+  title: "Title",
+  type_of_work_id: "Type of Work",
+  academic_year: "Academic Year",
+  semester: "Semester",
+  start_date: "Start",
+  end_date: "End",
+  location: "Location",
+  description: "Description"
+};
+
+// Function to map actual keys to display names
+function getDisplayName(key) {
+  return keyDisplayNames[key] || key; // Use the display name if available, otherwise use the actual key
+}
+
 // Function to validate Firstname and Lastname
 function validateName() {
   const fullnameInput = document.getElementById("fullname");
@@ -151,7 +172,7 @@ async function submitForm(event) {
 
       // Display success message with formatted data
       const formattedData = Object.entries(responseData.data)
-        .map(([key, value]) => `"${key}": "${value}"`)
+        .map(([key, value]) => `"${getDisplayName(key)}": "${value}"`) // change from key name to keyDisplay name (add 1.2)
         .join("\n");
 
       // Display success message with formatted data
