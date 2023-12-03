@@ -175,14 +175,19 @@ async function submitForm(event) {
         .map(([key, value]) => `"${getDisplayName(key)}": "${value}"`) // change from key name to keyDisplay name (add 1.2)
         .join("\n");
 
-      // Display success message with formatted data
-      alert(responseData.message + "\n" + formattedData);
-
       // Display the formatted data under the form
       const formDataOutput = document.getElementById("formDataOutput");
-      formDataOutput.textContent = "Submitted Form Data:\n" + formattedData; /* **fix 2** */
+      formDataOutput.innerHTML = "Submitted Form Data:<br>" + formatDataAsList(responseData.data);
 
       document.getElementById("myForm").reset();
+
+      function formatDataAsList(data) {
+        const formattedList = Object.entries(data)
+          .map(([key, value]) => `<strong>${getDisplayName(key)}:</strong> ${value}`)
+          .join("<br>");
+        return formattedList;
+      } /* **fix 2** */
+
     } else {
       console.error("Failed to submit form data.");
 
