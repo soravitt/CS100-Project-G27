@@ -234,6 +234,23 @@ html{
     height: 0;
 }
 
+.cirfi {
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: #f3ecda;
+}
+
+
+/* data output */
+#formDataOutput {
+    font-size: 2rem;
+    margin-left: 3vw;
+    color: #473c33;
+    background-color: #f3ecda  ;
+}
+
 
 /* 768 --Tablet----HiddenBar */
 @media only screen and (min-width: 768px) {
@@ -265,6 +282,15 @@ html{
     #icon {
         visibility: hidden;
     }
+
+    /* .fortab {
+        width: 3.5vw;
+        height: 3.5vw;
+        right: 0;
+        top: -5vw;
+        margin-top: 2vh;
+        margin-right: -90vw;
+    } */
 
     .col-container {
         display: flex;
@@ -349,7 +375,21 @@ html{
         height: 12vh;
         border-radius: 50%;
         left: -2vh;
-        bottom: 39vh;
+        bottom: 49vh;
+    }
+
+    .cirfi{
+        visibility: visible;
+        width: 12vh;
+        height: 12vh;
+        border-radius: 50%;
+        left: -2vh;
+        bottom: 29vh;
+        border: #473c33 solid 1px;
+    }
+
+    #firset {
+        visibility: hidden;
     }
 
     .fire-container img{
