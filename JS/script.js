@@ -3,14 +3,14 @@ const config = {
 };
 const port = 8000;
 
-// change key name for output (add 1.1).
+// Change key name for output (add 1.1).
 const keyDisplayNames = {
   first_name: "First Name",
   last_name: "Last Name",
   student_id: "Student ID",
   email: "Email",
   title: "Title",
-  type_of_work_value: "Type of Work",
+  type_of_work_id: "Type of Work",
   academic_year: "Academic Year",
   semester: "Semester",
   start_date: "Start",
@@ -44,21 +44,20 @@ function validateStudentID() {
   const studentIDInput = document.getElementById("studentID");
   const studentIDPattern = /^\d{10}$/;
   const errorElement = document.getElementById("studentIDError");
-  const firstTwoDigits = parseInt(studentIDInput.value.substring(0, 2), 10); // slice 2 first digit of Stu. ID.
+  const firstTwoDigits = parseInt(studentIDInput.value.substring(0, 2), 10); // Slice 2 first digits of Stu. ID.
 
   if (!studentIDPattern.test(studentIDInput.value)) {
     errorElement.textContent = "Please enter a 10-digit Student ID.";
     return false;
   } else if (firstTwoDigits > 66) {
-    errorElement.textContent = "This student ID is not exist."; /* (add 2) add the first 2 digit ID is more than 66. */
+    errorElement.textContent = "This student ID does not exist."; /* **fix 1** Add the first 2 digit ID is more than 66. */
     return false;
   } else {
-  errorElement.textContent = ""; // Clear the error message when valid
+    errorElement.textContent = ""; // Clear the error message when valid
   }
 
   return true;
 }
-
 
 // Function to validate University Email
 function validateEmail() {
@@ -112,18 +111,6 @@ function populateActivityTypes(activityTypes) {
   }
 }
 
-// Function to populate activity types in the select element (add 3) type_of_work_id -> value
-function populateActivityTypes(activityTypes) {
-  const activityTypeSelect = document.getElementById("activityType");
-
-  for (const type of activityTypes) {
-    const option = document.createElement("option");
-    option.value = type.id;
-    option.textContent = type.value;
-    activityTypeSelect.appendChild(option);
-  }
-}
-
 // Event listener when the page content has finished loading
 document.addEventListener("DOMContentLoaded", async () => {
   const activityTypes = await fetchActivityTypes();
@@ -151,8 +138,7 @@ async function submitForm(event) {
 
   // Process the description input with new lines
   const descriptionInput = document.getElementById("description").value;
-  const description = descriptionInput.replace(/\n/g, "<br>"); // (change 1) Replace new lines with HTML line breaks
-
+  const description = descriptionInput.replace(/\n/g, "<br>"); // Replace new lines with HTML line breaks
 
   // Create the data object to send to the backend
   const formData = new FormData(event.target);
@@ -162,7 +148,7 @@ async function submitForm(event) {
     student_id: parseInt(formData.get("studentID")),
     email: formData.get("email"),
     title: formData.get("workTitle"),
-    type_of_work_value: getActivityTypeValue(activityTypes, parseInt(formData.get("activityType"))),
+    type_of_work: formData.get("activityType"), /* **fix 4** Change to type_of_work */
     academic_year: parseInt(formData.get("academicYear")) - 543,
     semester: parseInt(formData.get("semester")),
     start_date: formData.get("startDate"),
@@ -172,12 +158,6 @@ async function submitForm(event) {
   };
 
   console.log(data);
-
-  // Helper function to get the value of the selected activity type
-  function getActivityTypeValue(activityTypes, typeId) {
-    const selectedType = activityTypes.find(type => type.id === typeId);
-    return selectedType ? selectedType.value : "";
-  }
 
   try {
     // Send data to the backend using POST request
@@ -198,7 +178,7 @@ async function submitForm(event) {
         .map(([key, value]) => `"${getDisplayName(key)}": "${value}"`) // change from key name to keyDisplay name (add 1.2)
         .join("\n");
 
-      // (change 1) Display the formatted data under the form
+      // Display the formatted data under the form
       const formDataOutput = document.getElementById("formDataOutput");
       formDataOutput.innerHTML = "Submitted Form Data:<br>" + formatDataAsList(responseData.data);
 
@@ -209,13 +189,13 @@ async function submitForm(event) {
           .map(([key, value]) => `<strong>${getDisplayName(key)}:</strong> ${value}`)
           .join("<br>");
         return formattedList;
-      }
+      } /* **fix 2** */
 
     } else {
       console.error("Failed to submit form data.");
 
       // Display error message
-      alert("Your date is not in this semester or/ and your descriptions is empty. Please try again."); // (change 2) change error massage
+      alert("Your date is not in this semester or/ and your descriptions are empty. Please try again."); /* **fix 3** Change error message*/
     }
   } catch (error) {
     console.error("An error occurred while submitting form data:", error);
@@ -225,7 +205,3 @@ async function submitForm(event) {
 // Event listener for form submission
 document.getElementById("myForm").addEventListener("submit", submitForm);
 
-// Event listeners for input validation on user input
-document.getElementById("fullname").addEventListener("input", validateName);
-document.getElementById("studentID").addEventListener("input", validateStudentID);
-document.getElementById("email").addEventListener("input", validateEmail);
