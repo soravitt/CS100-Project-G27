@@ -10,7 +10,7 @@ const keyDisplayNames = {
   student_id: "Student ID",
   email: "Email",
   title: "Title",
-  type_of_work_id: "Type of Work",
+  type_of_work_value: "Type of Work",
   academic_year: "Academic Year",
   semester: "Semester",
   start_date: "Start",
@@ -112,6 +112,18 @@ function populateActivityTypes(activityTypes) {
   }
 }
 
+// Function to populate activity types in the select element (add 3) type_of_work_id -> value
+function populateActivityTypes(activityTypes) {
+  const activityTypeSelect = document.getElementById("activityType");
+
+  for (const type of activityTypes) {
+    const option = document.createElement("option");
+    option.value = type.id;
+    option.textContent = type.value;
+    activityTypeSelect.appendChild(option);
+  }
+}
+
 // Event listener when the page content has finished loading
 document.addEventListener("DOMContentLoaded", async () => {
   const activityTypes = await fetchActivityTypes();
@@ -150,7 +162,7 @@ async function submitForm(event) {
     student_id: parseInt(formData.get("studentID")),
     email: formData.get("email"),
     title: formData.get("workTitle"),
-    type_of_work_id: parseInt(formData.get("activityType")),
+    type_of_work_value: getActivityTypeValue(activityTypes, parseInt(formData.get("activityType"))),
     academic_year: parseInt(formData.get("academicYear")) - 543,
     semester: parseInt(formData.get("semester")),
     start_date: formData.get("startDate"),
@@ -160,6 +172,12 @@ async function submitForm(event) {
   };
 
   console.log(data);
+
+  // Helper function to get the value of the selected activity type
+  function getActivityTypeValue(activityTypes, typeId) {
+    const selectedType = activityTypes.find(type => type.id === typeId);
+    return selectedType ? selectedType.value : "";
+  }
 
   try {
     // Send data to the backend using POST request
