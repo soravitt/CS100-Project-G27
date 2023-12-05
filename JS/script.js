@@ -50,7 +50,7 @@ function validateStudentID() {
     errorElement.textContent = "Please enter a 10-digit Student ID.";
     return false;
   } else if (firstTwoDigits > 66) {
-    errorElement.textContent = "This student ID is not exist."; /* **fix 1** add the first 2 digit ID is more than 66. */
+    errorElement.textContent = "This student ID is not exist."; /* (add 2) add the first 2 digit ID is more than 66. */
     return false;
   } else {
   errorElement.textContent = ""; // Clear the error message when valid
@@ -139,7 +139,7 @@ async function submitForm(event) {
 
   // Process the description input with new lines
   const descriptionInput = document.getElementById("description").value;
-  const description = descriptionInput.replace(/\n/g, "<br>"); // Replace new lines with HTML line breaks
+  const description = descriptionInput.replace(/\n/g, "<br>"); // (change 1) Replace new lines with HTML line breaks
 
 
   // Create the data object to send to the backend
@@ -180,7 +180,7 @@ async function submitForm(event) {
         .map(([key, value]) => `"${getDisplayName(key)}": "${value}"`) // change from key name to keyDisplay name (add 1.2)
         .join("\n");
 
-      // Display the formatted data under the form
+      // (change 1) Display the formatted data under the form
       const formDataOutput = document.getElementById("formDataOutput");
       formDataOutput.innerHTML = "Submitted Form Data:<br>" + formatDataAsList(responseData.data);
 
@@ -191,13 +191,13 @@ async function submitForm(event) {
           .map(([key, value]) => `<strong>${getDisplayName(key)}:</strong> ${value}`)
           .join("<br>");
         return formattedList;
-      } /* **fix 2** */
+      }
 
     } else {
       console.error("Failed to submit form data.");
 
       // Display error message
-      alert("Your date is not in this semester or/ and your descriptions is empty. Please try again."); /* **fix 3** change error massage*/
+      alert("Your date is not in this semester or/ and your descriptions is empty. Please try again."); // (change 2) change error massage
     }
   } catch (error) {
     console.error("An error occurred while submitting form data:", error);
