@@ -182,6 +182,7 @@ async function submitForm(event) {
 
       // Display the formatted data under the form
       const formDataOutput = document.getElementById("formDataOutput");
+      formDataOutput.classList.add("styledOutput");
       formDataOutput.innerHTML = "Submitted Form Data:<br>" + formatDataAsList(responseData.data);
 
       document.getElementById("myForm").reset();
