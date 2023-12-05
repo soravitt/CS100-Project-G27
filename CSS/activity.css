@@ -245,7 +245,7 @@ html{
 
 
 /* data output */
-.styledDataOutput {
+#formDataOutput {
     font-size: 2rem;
     margin-left: 3vw;
     color: #473c33;
