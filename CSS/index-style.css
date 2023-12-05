@@ -258,6 +258,10 @@ footer{
         visibility: visible;
     }
 
+    .Menu a{
+        font-size: 3rem;
+    }
+
     .tabbar{
         visibility: hidden;
     }
