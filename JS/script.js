@@ -3,7 +3,7 @@ const config = {
 };
 const port = 8000;
 
-// Change key name for output (add 1.1).
+// change key name for output (add 1.1).
 const keyDisplayNames = {
   first_name: "First Name",
   last_name: "Last Name",
@@ -44,20 +44,21 @@ function validateStudentID() {
   const studentIDInput = document.getElementById("studentID");
   const studentIDPattern = /^\d{10}$/;
   const errorElement = document.getElementById("studentIDError");
-  const firstTwoDigits = parseInt(studentIDInput.value.substring(0, 2), 10); // Slice 2 first digits of Stu. ID.
+  const firstTwoDigits = parseInt(studentIDInput.value.substring(0, 2), 10); // slice 2 first digit of Stu. ID.
 
   if (!studentIDPattern.test(studentIDInput.value)) {
     errorElement.textContent = "Please enter a 10-digit Student ID.";
     return false;
   } else if (firstTwoDigits > 66) {
-    errorElement.textContent = "This student ID does not exist."; /* **fix 1** Add the first 2 digit ID is more than 66. */
+    errorElement.textContent = "This student ID is not exist."; /* **fix 1** add the first 2 digit ID is more than 66. */
     return false;
   } else {
-    errorElement.textContent = ""; // Clear the error message when valid
+  errorElement.textContent = ""; // Clear the error message when valid
   }
 
   return true;
 }
+
 
 // Function to validate University Email
 function validateEmail() {
@@ -140,6 +141,7 @@ async function submitForm(event) {
   const descriptionInput = document.getElementById("description").value;
   const description = descriptionInput.replace(/\n/g, "<br>"); // Replace new lines with HTML line breaks
 
+
   // Create the data object to send to the backend
   const formData = new FormData(event.target);
   const data = {
@@ -148,7 +150,7 @@ async function submitForm(event) {
     student_id: parseInt(formData.get("studentID")),
     email: formData.get("email"),
     title: formData.get("workTitle"),
-    type_of_work: formData.get("activityType"), /* **fix 4** Change to type_of_work */
+    type_of_work_id: parseInt(formData.get("activityType")),
     academic_year: parseInt(formData.get("academicYear")) - 543,
     semester: parseInt(formData.get("semester")),
     start_date: formData.get("startDate"),
@@ -195,7 +197,7 @@ async function submitForm(event) {
       console.error("Failed to submit form data.");
 
       // Display error message
-      alert("Your date is not in this semester or/ and your descriptions are empty. Please try again."); /* **fix 3** Change error message*/
+      alert("Your date is not in this semester or/ and your descriptions is empty. Please try again."); /* **fix 3** change error massage*/
     }
   } catch (error) {
     console.error("An error occurred while submitting form data:", error);
@@ -205,3 +207,7 @@ async function submitForm(event) {
 // Event listener for form submission
 document.getElementById("myForm").addEventListener("submit", submitForm);
 
+// Event listeners for input validation on user input
+document.getElementById("fullname").addEventListener("input", validateName);
+document.getElementById("studentID").addEventListener("input", validateStudentID);
+document.getElementById("email").addEventListener("input", validateEmail);
