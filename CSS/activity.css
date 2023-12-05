@@ -84,6 +84,7 @@ html{
     display: block;
     font-weight: bold;
   }
+*/
 
 /* Styling for various form input types */
 .form-group input[type="text"],
@@ -248,7 +249,7 @@ html{
     font-size: 2rem;
     margin-left: 3vw;
     color: #473c33;
-    background-color: #f3ecda  ;
+    background-color: #f3ecda;
 }
 
 
