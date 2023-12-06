@@ -254,13 +254,9 @@ html{
 }
 
 #formDataOutput strong {
+    font-size: 2rem;
     color: #fda769; /* Change the color of strong (key) */
 }
-
-#formDataOutput br {
-    display: none; /* Hide line breaks */
-}
-
 
 /* 768 --Tablet----HiddenBar */
 @media only screen and (min-width: 768px) {
