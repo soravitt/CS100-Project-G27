@@ -245,8 +245,20 @@ html{
 #formDataOutput {
     font-size: 2rem;
     margin-left: 3vw;
-    color: #473c33;
-    background-color: #f3ecda;
+    color: #abc270;
+    background-color: #473c33;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    margin-top: 20px;
+}
+
+#formDataOutput strong {
+    color: #fda769; /* Change the color of strong (key) */
+}
+
+#formDataOutput br {
+    display: none; /* Hide line breaks */
 }
 
 
