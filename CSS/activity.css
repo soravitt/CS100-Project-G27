@@ -251,6 +251,8 @@ html{
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
     margin-top: 20px;
+    width: 70vw;
+    max-width: 70%;
 }
 
 #formDataOutput strong {
