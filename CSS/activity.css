@@ -14,7 +14,7 @@ html{
 
 .con {
     background-color: #f3ecda;
-    height: 130vh;
+    height: auto;
     width: 100vw;
 }
 
@@ -246,6 +246,12 @@ html{
     width: 100vw;
 }
 
+.eding {
+    height: 20vh;
+    width: 100vw;
+    background-color: #f3ecda;
+}
+
 
 /* data output */
 #formDataOutput {
@@ -256,9 +262,8 @@ html{
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-    margin-top: 20px;
-    margin-bottom: 20px;
     width: 60vw;
+    margin-top: 1vh;
     max-width: 100%;
 }
 
@@ -364,7 +369,7 @@ html{
         position: absolute;
         visibility: visible;
         right: 0;
-        margin-bottom: 0;
+        margin-top: -79.77vh;
         width: 62.5vh;
     }
 
