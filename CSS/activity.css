@@ -240,6 +240,12 @@ html{
     margin-left: 5%;
 }
 
+.HiofOutput {
+    height: auto;
+    background-color: #f3ecda;
+    width: 100vw;
+}
+
 
 /* data output */
 #formDataOutput {
