@@ -139,7 +139,7 @@ async function submitForm(event) {
 
   // Process the description input with new lines
   const descriptionInput = document.getElementById("description").value;
-  const description = descriptionInput.replace(/\n/g, "<br>"); // Replace new lines with HTML line breaks
+  const description = descriptionInput.replace(/\n/g, "<br>"); /* ** fix 2 ** Replace new lines with HTML line breaks */
 
 
   // Create the data object to send to the backend
@@ -191,13 +191,13 @@ async function submitForm(event) {
           .map(([key, value]) => `<strong>${getDisplayName(key)}:</strong> ${value}`)
           .join("<br>");
         return formattedList;
-      } /* **fix 2** */
+      } /* **fix 3** */
 
     } else {
       console.error("Failed to submit form data.");
 
       // Display error message
-      alert("Your date is not in this semester or/ and your descriptions is empty. Please try again."); /* **fix 3** change error massage*/
+      alert("Your date is not in this semester or/ and your descriptions is empty. Please try again."); /* **fix 4** change error massage*/
     }
   } catch (error) {
     console.error("An error occurred while submitting form data:", error);
